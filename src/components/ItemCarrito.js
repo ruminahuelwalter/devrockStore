@@ -4,7 +4,7 @@ import Borrar from "../assets/static/borrar.png"
 
 
 export default function ItemCarrito(props) {
-    const {nombre, precio, img, id, eliminarCarrito}=props[0];
+    const {nombre, precio, img, id}=props[0];
     console.log(props, "como vienen al item carrito")
 
     const handleBorrar=()=>{

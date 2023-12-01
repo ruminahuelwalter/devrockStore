@@ -10,7 +10,7 @@ export default function Carrito() {
         <div className="carrito">
             <div className="carrito-listadito">
                 {carrito.map((item ,i)=>(
-                    <ItemCarrito {...item} key={i} ></ItemCarrito>
+                    <ItemCarrito {...item} key={i} eliminarCarrito={eliminarCarrito} ></ItemCarrito>
                 ))}
             </div>
 

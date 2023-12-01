@@ -3,7 +3,7 @@
 
 const LISTAME_PRODUCTOS = "LISTAME_PRODUCTOS"
 const AGREGAR_CARRITO = "AGREGAR_CARRITO"
-//const ELIMINAR_CARRITO = "ELIMINAR_CARRITO"
+const ELIMINAR_CARRITO = "ELIMINAR_CARRITO"
 
 export default function Reducer(state, action){
     const {payload , type } = action;
@@ -20,10 +20,17 @@ export default function Reducer(state, action){
                     state.productos.filter((ite)=> ite.id === parseInt (payload)),
                 ]
             }
-        default:
-            return state
+            case ELIMINAR_CARRITO:
+                return {
+                    ...state,
+                    carrito: [
+                        ...state.carrito,
+                        state.carrito.filter((ite)=>ite[0].id !== parseInt(payload)),
+                    ]
+                }
+
     }
+    
 
 }
-
 

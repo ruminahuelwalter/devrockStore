@@ -1,5 +1,5 @@
-import React from 'react'
-import "../assets/css/ItemCarrito.css"
+import React from 'react';
+import "../assets/css/ItemCarrito.css";
 import Borrar from "../assets/static/borrar.png"
 
 
@@ -18,8 +18,9 @@ export default function ItemCarrito(props) {
                         <h1 className="carrito-item-titulo">{nombre}</h1>
                         <h3 className="carrito-item-precio">AR$ {precio}</h3>
                     </div>
-                    <img src={Borrar} alt="" className="carrito-item-borrar" onClick={handleBorrar}/>
+                    <img src={Borrar} alt="" className="carrito-item-borrar" onClick={handleBorrar}
+                    />
                 </div>
         </>
-    )
+    );
 }

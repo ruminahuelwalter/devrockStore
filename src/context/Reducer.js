@@ -20,14 +20,17 @@ export default function Reducer(state, action){
                     state.productos.filter((ite)=> ite.id === parseInt (payload)),
                 ]
             }
-            case ELIMINAR_CARRITO:
-                return {
-                    ...state,
-                    carrito: [
-                        ...state.carrito,
-                        state.carrito.filter((ite)=>ite[0].id !== parseInt(payload)),
-                    ]
-                }
+        case ELIMINAR_CARRITO:
+            console.log(
+                payload,
+                "<- payload, state ->",
+                state.carrito,
+                "lo que llega"
+                );
+            return{
+                ...state,
+                carrito: state.carrito.filter((items) => items[0].id !== payload),
+            };
 
     }
     
